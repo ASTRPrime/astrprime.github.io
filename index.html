@@ -6,48 +6,142 @@
     <title>ASTR PRIME - المتجر الرسمي</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, sans-serif; }
-        body { background-color: #0d1117; color: #ffffff; text-align: center; padding: 20px; }
-        header { padding: 40px 20px; border-bottom: 2px solid #21262d; margin-bottom: 30px; }
-        h1 { font-size: 2.5rem; color: #58a6ff; margin-bottom: 10px; }
-        p { color: #8b949e; font-size: 1.1rem; }
-        .container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
-        .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 25px; transition: 0.3s; }
-        .card:hover { border-color: #58a6ff; transform: translateY(-5px); }
-        .card h3 { color: #58a6ff; margin-bottom: 15px; font-size: 1.3rem; }
-        .card p { font-size: 0.95rem; margin-bottom: 20px; }
-        .btn { display: inline-block; background: #238636; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: 0.2s; }
-        .btn:hover { background: #2ea043; }
-        footer { margin-top: 50px; color: #484f58; font-size: 0.9rem; border-top: 1px solid #21262d; padding-top: 20px; }
+        body { background-color: #0b0f19; color: #ffffff; text-align: center; }
+        
+        header { background: linear-gradient(135deg, #111827 0%, #1f2937 100%); padding: 50px 20px; border-bottom: 2px solid #374151; }
+        .logo { font-size: 2.8rem; font-weight: bold; color: #3b82f6; text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); margin-bottom: 10px; }
+        .subtitle { color: #9ca3af; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .section-title { font-size: 1.6rem; margin-bottom: 25px; color: #f3f4f6; border-right: 4px solid #3b82f6; padding-right: 10px; text-align: right; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        .card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 25px; text-align: right; transition: 0.3s; }
+        .card:hover { border-color: #3b82f6; transform: translateY(-3px); }
+        .card h3 { color: #3b82f6; margin-bottom: 10px; font-size: 1.3rem; }
+        .card p { color: #9ca3af; font-size: 0.9rem; margin-bottom: 15px; line-height: 1.5; }
+        
+        .price { font-size: 1.1rem; font-weight: bold; color: #10b981; margin-bottom: 15px; }
+        
+        .btn { display: block; width: 100%; background: #2563eb; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; text-align: center; border: none; cursor: pointer; font-size: 1rem; transition: 0.2s; }
+        .btn:hover { background: #1d4ed8; }
+
+        /* صندوق إتمام الطلب */
+        .checkout-box { background: #161e2e; border: 2px solid #3b82f6; border-radius: 12px; padding: 30px; max-width: 600px; margin: 40px auto; text-align: right; display: none; }
+        .checkout-box h3 { color: #3b82f6; margin-bottom: 15px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; color: #9ca3af; font-size: 0.9rem; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; background: #0b0f19; border: 1px solid #374151; color: white; border-radius: 6px; font-size: 1rem; }
+        
+        .payment-section { background: #111827; border-top: 2px solid #1f2937; padding: 30px 20px; margin-top: 50px; }
+        .payment-logos { display: flex; justify-content: center; gap: 15px; margin-top: 15px; flex-wrap: wrap; }
+        .pay-badge { background: #1f2937; padding: 8px 15px; border-radius: 6px; border: 1px solid #374151; font-weight: bold; color: #e5e7eb; font-size: 0.9rem; }
+
+        footer { margin-top: 30px; color: #6b7280; font-size: 0.85rem; padding: 20px; border-top: 1px solid #1f2937; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>ASTR PRIME</h1>
-        <p>الوجهة الأولى لأقوى التويكات، برامج التتبع، والخدمات الرقمية الحصرية</p>
+        <div class="logo">ASTR PRIME</div>
+        <p class="subtitle">المتجر الرقمي الرسمي لأقوى التويكات، برامج التتبع، واشتراكات سناب بلس.</p>
     </header>
 
     <div class="container">
-        <div class="card">
-            <h3>تويكات الألعاب الحصرية</h3>
-            <p>أداء أعمق، سرعة استجابة أعلى، وتجربة اللعب المثالية.</p>
-            <a href="https://discord.gg/yourinvite" target="_blank" class="btn">اطلب الآن</a>
+        <h2 class="section-title">اختر الخدمة للطلب الفوري</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>اشتراك سناب بلس الرسمي</h3>
+                <p>اشتراك رسمي وآمن 100% بطريقة التفعيل المضمونة بدون مخاطر.</p>
+                <div class="price">35 ر.س</div>
+                <button class="btn" onclick="selectProduct('اشتراك سناب بلس الرسمي - 35 ر.س')">شراء الآن</button>
+            </div>
+
+            <div class="card">
+                <h3>برنامج الرادار والتتبع</h3>
+                <p>أداء مستقر ودقة فائقة لتجربة استثنائية وآمنة بالكامل.</p>
+                <div class="price">65 ر.س</div>
+                <button class="btn" onclick="selectProduct('برنامج الرادار والتتبع - 65 ر.س')">شراء الآن</button>
+            </div>
+
+            <div class="card">
+                <h3>تويكات الألعاب الحصرية</h3>
+                <p>سكربتات متقدمة لرفع سرعة الاستجابة وتقليل البينق.</p>
+                <div class="price">119 ر.س</div>
+                <button class="btn" onclick="selectProduct('تويكات الألعاب الحصرية - 119 ر.س')">شراء الآن</button>
+            </div>
         </div>
-        <div class="card">
-            <h3>برامج الرادار والتتبع</h3>
-            <p>دقة فائقة وأمان عالي لتجربة استثنائية.</p>
-            <a href="https://discord.gg/yourinvite" target="_blank" class="btn">اطلب الآن</a>
+
+        <!-- نموذج إتمام الطلب اللي يظهر للعميل بعد الضغط على شراء -->
+        <div class="checkout-box" id="checkoutForm">
+            <h3>إتمام طلب الشراء</h3>
+            <p id="selectedItemText" style="color: #10b981; margin-bottom: 15px; font-weight: bold;"></p>
+            
+            <div class="form-group">
+                <label>اسمك أو المعرف:</label>
+                <input type="text" id="custName" placeholder="اكتب اسمك هنا">
+            </div>
+
+            <div class="form-group">
+                <label>وسيلة التواصل (تليجرام أو رقم أو ديسكورد):</label>
+                <input type="text" id="custContact" placeholder="@YourName أو الرقم">
+            </div>
+
+            <div class="form-group">
+                <label>اختر طريقة الدفع المحول منها:</label>
+                <select id="payMethod">
+                    <option value="STC Bank">STC Bank</option>
+                    <option value="Barq">برق (Barq)</option>
+                    <option value="الراجحي">مصرف الراجحي</option>
+                </select>
+            </div>
+
+            <button class="btn" style="background: #10b981;" onclick="completeOrder()">تأكيد وإرسال الطلب</button>
         </div>
-        <div class="card">
-            <h3>اشتراكات سناب بلس</h3>
-            <p>اشتراكات رسمية بطريقة آمنة ومضمونة 100%.</p>
-            <a href="https://discord.gg/yourinvite" target="_blank" class="btn">اطلب الآن</a>
+    </div>
+
+    <div class="payment-section">
+        <h3 style="color: #f3f4f6; margin-bottom: 8px;">طرق الدفع المعتمدة</h3>
+        <p style="color: #9ca3af; font-size: 0.9rem;">حول المبلغ ثم أكمل الطلب من النموذج بالأعلى</p>
+        <div class="payment-logos">
+            <div class="pay-badge">STC Bank</div>
+            <div class="pay-badge">Barq (برق)</div>
+            <div class="pay-badge">مصرف الراجحي</div>
         </div>
     </div>
 
     <footer>
         <p>© 2026 ASTR PRIME. جميع الحقوق محفوظة.</p>
     </footer>
+
+    <script>
+        let chosenProduct = "";
+        function selectProduct(productName) {
+            chosenProduct = productName;
+            document.getElementById('selectedItemText').innerText = "المنتج المختار: " + productName;
+            document.getElementById('checkoutForm').style.display = "block";
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        function completeOrder() {
+            let name = document.getElementById('custName').value;
+            let contact = document.getElementById('custContact').value;
+            let pay = document.getElementById('payMethod').value;
+
+            if(!name || !contact) {
+                alert("الرجاء تعبئة الاسم وسيلة التواصل!");
+                return;
+            }
+
+            let msg = `مرحباً، أريد طلب:\n*المنتج:* ${chosenProduct}\n*الاسم:* ${name}\n*التواصل:* ${contact}\n*الدفع عبر:* ${pay}`;
+            let encoded = encodeURIComponent(msg);
+            
+            // تحويل العميل مباشرة لإرسال تفاصيل طلبه (يمكنك استبدال الرابط برابط تليجرام الخاص بك أو ديسكورد)
+            window.open(`https://wa.me/966500000000?text=${encoded}`, '_blank');
+        }
+    </script>
 
 </body>
 </html>
